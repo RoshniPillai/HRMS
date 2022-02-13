@@ -20,6 +20,11 @@ import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
 import BasicDatePicker from "./datePicker";
+import Fab from "@mui/material/Fab";
+import AddIcon from "@mui/icons-material/Add";
+import ArrowBackIosOutlinedIcon from "@mui/icons-material/ArrowBackIosOutlined";
+import ChevronLeftOutlinedIcon from "@mui/icons-material/ChevronLeftOutlined";
+import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
 
 export default function Dashboard() {
   return (
@@ -109,6 +114,19 @@ export default function Dashboard() {
                               </Box>
                             </Grid>
                           </Grid>
+                          <Box
+                            sx={{
+                              // width: 26,
+                              // minHeight: 29,
+                              // height: 11,
+                              position: "absolute",
+                              left: 85
+                            }}
+                          >
+                            <Fab size="small" color="inherit" aria-label="add">
+                              <ChevronLeftOutlinedIcon fontSize="small" />
+                            </Fab>
+                          </Box>
                         </CardContent>
                       </Card>
                     </Grid>
@@ -137,6 +155,16 @@ export default function Dashboard() {
                               </Box>
                             </Grid>
                           </Grid>
+                          <Box
+                            sx={{
+                              position: "absolute",
+                              left: 431
+                            }}
+                          >
+                            <Fab size="small" color="inherit" aria-label="add">
+                              <ChevronRightOutlinedIcon fontSize="small" />
+                            </Fab>
+                          </Box>
                         </CardContent>
                       </Card>
                     </Grid>
