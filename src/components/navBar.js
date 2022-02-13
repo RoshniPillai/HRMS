@@ -18,6 +18,8 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import Drawer from "@mui/material/Drawer";
+import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
+import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 
 const drawerWidth = 80;
 
@@ -201,7 +203,11 @@ export default function PrimarySearchAppBar() {
             ].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 0 ? (
+                    <WidgetsOutlinedIcon />
+                  ) : (
+                    <PeopleAltOutlinedIcon />
+                  )}
                 </ListItemIcon>
                 {/* <ListItemText primary={text} /> */}
               </ListItem>
