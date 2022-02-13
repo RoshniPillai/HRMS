@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import NavigationBar from "./navBar";
-import BasicDatePicker from "./datePicker";
+import DrawerPage from "./drawer";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import EventIcon from "@mui/icons-material/Event";
@@ -14,18 +14,19 @@ import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
-import TextField from "@mui/material/TextField";
-import FormHelperText from "@mui/material/FormHelperText";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import IconButton from "@mui/material/IconButton";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import TextField from "@mui/material/TextField";
+import InputLabel from "@mui/material/InputLabel";
+import BasicDatePicker from "./datePicker";
 
 export default function Dashboard() {
   return (
     <React.Fragment>
       <Container maxWidth="lg">
         <NavigationBar />
-        <Box pt={3} pl={3} sx={{ bgcolor: "#F5F5F5", height: "100vh" }}>
+        <Box pt={3} pl={5} sx={{ bgcolor: "#F5F5F5", height: "100vh" }}>
           <Grid sx={{ flexGrow: 1 }} container spacing={2}>
             <Grid item xs={12}>
               <Grid container justifyContent="justify" spacing={2}>
@@ -33,7 +34,7 @@ export default function Dashboard() {
 
                 <Grid item xs={4}>
                   <Grid container spacing={2}>
-                    <Grid item xs={8}>
+                    <Grid item xs={9}>
                       <Typography
                         variant="body1"
                         component="h6"
@@ -43,7 +44,7 @@ export default function Dashboard() {
                         Your TimeOff Balance
                       </Typography>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={3}>
                       <Link href="#" underline="none" sx={{ fontSize: 10 }}>
                         Request a Leave
                       </Link>
@@ -52,21 +53,26 @@ export default function Dashboard() {
                   <Box mt={2}></Box>
                   <Grid container spacing={2}>
                     <Grid item xs={12}>
-                      <FormControl sx={{ align: "left" }} variant="outlined">
+                      <FormControl
+                        sx={{ m: 0, width: "40ch" }}
+                        variant="outlined"
+                      >
+                        <InputLabel
+                          htmlFor="outlined-adornment-password"
+                          style={{ fontSize: 12 }}
+                        >
+                          Balance as of date
+                        </InputLabel>
                         <OutlinedInput
                           id="outlined-adornment-password"
                           type={"text"}
                           placeholder={""}
-                          value={"Balance as of date"}
-                          // onChange={handleChange('password')}
+                          value={""}
+                          style={{ fontSize: 10 }}
+                          // onChange={}
                           endAdornment={
                             <InputAdornment position="end">
-                              <IconButton
-                                aria-label=""
-                                // onClick={}
-                                //onMouseDown={}
-                                edge="end"
-                              >
+                              <IconButton aria-label="" edge="end">
                                 <EventIcon />
                               </IconButton>
                             </InputAdornment>
@@ -136,7 +142,7 @@ export default function Dashboard() {
                     </Grid>
                   </Grid>
                   <Box mt={2}></Box>
-                  <Grid container spacing={2}>
+                  <Grid container spacing={0}>
                     <Grid item xs={12}>
                       <Typography
                         variant="body1"
@@ -147,6 +153,7 @@ export default function Dashboard() {
                         Quick Action
                       </Typography>
                     </Grid>
+                    <Box pb={3}></Box>
                     <Grid container spacing={2}>
                       <Grid item xs={6}>
                         <Card sx={{}}>
@@ -178,7 +185,7 @@ export default function Dashboard() {
                       <Grid item xs={6}>
                         <Card sx={{}}>
                           <CardContent>
-                            <Grid container spacing={2}>
+                            <Grid container spacing={0}>
                               <Grid item xs={2}>
                                 <EventIcon />
                               </Grid>
@@ -205,8 +212,8 @@ export default function Dashboard() {
                     </Grid>
                   </Grid>
                   <Box mt={2}></Box>
-                  <Grid container spacing={1}>
-                    <Grid item xs={8}>
+                  <Grid container spacing={0}>
+                    <Grid item xs={10}>
                       <Typography
                         variant="body1"
                         component="h6"
@@ -216,12 +223,12 @@ export default function Dashboard() {
                         Todays Clocking
                       </Typography>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={2}>
                       <Link href="#" underline="none" sx={{ fontSize: 10 }}>
                         View History
                       </Link>
                     </Grid>
-
+                    <Box pb={3}></Box>
                     <Grid container spacing={2}>
                       <Grid item xs={12}>
                         <Card sx={{}}>
@@ -241,6 +248,7 @@ export default function Dashboard() {
                                 component="a"
                                 href="#"
                                 clickable
+                                style={{ fontSize: 10 }}
                               />
                               <Chip
                                 label="Clock-Out"
@@ -248,6 +256,7 @@ export default function Dashboard() {
                                 href="#"
                                 variant="outlined"
                                 disabled
+                                style={{ fontSize: 10 }}
                               />
                             </Stack>
                           </CardContent>
@@ -269,7 +278,7 @@ export default function Dashboard() {
                     </Grid>
                     <Grid item xs={2}>
                       <Link href="#" underline="none" sx={{ fontSize: 10 }}>
-                        Add
+                        + Add
                       </Link>
                     </Grid>
                     <Grid item xs={2}>
@@ -296,7 +305,7 @@ export default function Dashboard() {
                 {/* second block */}
                 <Grid item xs={4}>
                   <Grid container>
-                    <Grid item xs={8}>
+                    <Grid item xs={9}>
                       <Typography
                         variant="body1"
                         component="h6"
@@ -305,10 +314,11 @@ export default function Dashboard() {
                         Who's Off
                       </Typography>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={3}>
                       <Typography
                         variant="body1"
                         component="h6"
+                        align="right"
                         sx={{ fontSize: 10 }}
                       >
                         0 employees
@@ -337,7 +347,7 @@ export default function Dashboard() {
                     </Grid>
                     <Grid item xs={2}>
                       <Link href="#" underline="none" sx={{ fontSize: 10 }}>
-                        Add
+                        + Add
                       </Link>
                     </Grid>
                     <Grid item xs={2}>
@@ -346,6 +356,9 @@ export default function Dashboard() {
                       </Link>
                     </Grid>
                   </Grid>
+                  <Box mt={2}>
+                    <BasicDatePicker />
+                  </Box>
                   {/* <BasicDatePicker /> */}
                   <Box mt={2}></Box>
                   <Grid container spacing={1}>
@@ -362,7 +375,7 @@ export default function Dashboard() {
                       <Typography
                         variant="body1"
                         component="h6"
-                        align="center"
+                        align="left"
                         sx={{ fontSize: 10 }}
                       >
                         No upcoming event
