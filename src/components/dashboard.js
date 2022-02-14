@@ -384,7 +384,7 @@ export default function Dashboard() {
                       </Link>
                     </Grid>
                   </Grid>
-                  <Box mt={2}>
+                    <Box mt={2} sx={{ maxWidth: 340}}>
                     <DatePicker />
                   </Box>
                   <Box mt={2}></Box>
