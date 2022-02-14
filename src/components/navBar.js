@@ -18,8 +18,9 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import Drawer from "@mui/material/Drawer";
-import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
-import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
+import MenuDrawer from './menuDrawer';
+import Avatar from '@mui/material/Avatar';
+import Link from "@mui/material/Link";
 
 const drawerWidth = 80;
 
@@ -113,7 +114,7 @@ export default function PrimarySearchAppBar() {
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
           color="inherit"
-        >
+        >        
           <AccountCircle />
         </IconButton>
         <p>Profile</p>
@@ -147,6 +148,14 @@ export default function PrimarySearchAppBar() {
                 </Badge>
               </IconButton>
               <IconButton
+                size="small"
+                aria-label=""
+                color="inherit"
+                sx={{ fontSize: 10}}
+              >
+                i-See
+              </IconButton>
+              <IconButton
                 size="large"
                 edge="end"
                 aria-label="account of current user"
@@ -156,6 +165,7 @@ export default function PrimarySearchAppBar() {
                 color="inherit"
               >
                 <AccountCircle />
+                {/* <Avatar size="small">J</Avatar> */}
               </IconButton>
             </Box>
             <Box sx={{ display: { xs: "flex", md: "none" } }}>
@@ -182,7 +192,8 @@ export default function PrimarySearchAppBar() {
           flexShrink: 0,
           [`& .MuiDrawer-paper`]: {
             width: drawerWidth,
-            boxSizing: "border-box"
+            boxSizing: "border-box",
+            //background: '',
           }
         }}
       >
@@ -190,7 +201,8 @@ export default function PrimarySearchAppBar() {
           <img src="" alt="Logo" />
         </Box>
         <Toolbar />
-        <Box sx={{ overflow: "auto" }}>
+        <MenuDrawer/>
+        {/* <Box sx={{ overflow: "auto" }}>
           <List>
             {[
               "Inbox",
@@ -209,21 +221,13 @@ export default function PrimarySearchAppBar() {
                     <PeopleAltOutlinedIcon />
                   )}
                 </ListItemIcon>
-                {/* <ListItemText primary={text} /> */}
+                <ListItemText primary={text} />
               </ListItem>
             ))}
           </List>
-        </Box>
+        </Box> */}
       </Drawer>
-      {/* <Box component="main" sx={{ flexGrow: 1, p: 1 }}>
-        <Toolbar />
-      <Typography paragraph>
-        
-        </Typography>
-        <Typography paragraph>
-        
-        </Typography>
-      </Box> */}
+    
     </React.Fragment>
   );
 }
