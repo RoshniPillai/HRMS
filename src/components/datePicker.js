@@ -1,18 +1,18 @@
-import * as React from "react";
-import TextField from "@mui/material/TextField";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import DatePicker from "@mui/lab/DatePicker";
+import * as React from 'react';
+import TextField from '@mui/material/TextField';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import StaticDatePicker from '@mui/lab/StaticDatePicker';
 
-export default function BasicDatePicker() {
-  const [value, setValue] = React.useState(null);
+export default function DatePicker() {
+  const [value, setValue] = React.useState(new Date());
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <DatePicker
-        //  style={{ fontSize : 8}}
-        variant="static"
-        label="Select Date"
+      <StaticDatePicker
+        displayStaticWrapperAs="desktop"
+        views={['day']}
+       // openTo='year'
         value={value}
         onChange={(newValue) => {
           setValue(newValue);
