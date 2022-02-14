@@ -19,7 +19,7 @@ import IconButton from "@mui/material/IconButton";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
-import BasicDatePicker from "./datePicker";
+import DatePicker from "./datePicker";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import ArrowBackIosOutlinedIcon from "@mui/icons-material/ArrowBackIosOutlined";
@@ -385,9 +385,8 @@ export default function Dashboard() {
                     </Grid>
                   </Grid>
                   <Box mt={2}>
-                    <BasicDatePicker />
+                    <DatePicker />
                   </Box>
-                  {/* <BasicDatePicker /> */}
                   <Box mt={2}></Box>
                   <Grid container spacing={1}>
                     <Grid item xs={12}>
