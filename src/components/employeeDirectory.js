@@ -144,4 +144,4 @@ function EmployeeDirectoryPage() {
         </React.Fragment >
     );
 }
-export default EmployeeDirectory
+export default EmployeeDirectoryPage
