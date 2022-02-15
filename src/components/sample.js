@@ -1,13 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Toolbar from "@material-ui/core/Toolbar";
 import Box from "@mui/material/Box";
 import Drawer from "@material-ui/core/Drawer";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -19,12 +16,9 @@ import FormControl from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import IconButton from "@mui/material/IconButton";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
-import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
 import DatePicker from "./datePicker";
 import Fab from "@mui/material/Fab";
-import AddIcon from "@mui/icons-material/Add";
-import ArrowBackIosOutlinedIcon from "@mui/icons-material/ArrowBackIosOutlined";
 import ChevronLeftOutlinedIcon from "@mui/icons-material/ChevronLeftOutlined";
 import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
 
@@ -50,32 +44,13 @@ const styles = (theme) => ({
   toolbarActions: {
     marginLeft: "auto"
   },
-  // Styles for the root `div` element in the `Drawer` component.
   drawer: {
     // width: theme.layout.drawerWidth
     width: 100
   },
-  // Styles for the `Paper` component rendered by `Drawer`.
   drawerPaper: {
     width: "inherit"
   },
-  appContent: {
-    backgroundColor: "pink"
-  }
-  // Styles for the content area. It fills the available space
-  // in the flex container to the right (or left) of the drawer.
-  // appContent: theme.mixins.gutters({
-  //   // https://github.com/philipwalton/flexbugs#flexbug-17
-  //   flex: "1 1 100%",
-  //   maxWidth: "100%",
-  //   paddingTop: 80, // equal to AppBar height + 16px
-  //   margin: "0 auto",
-  //   // Set the max content width for each breakpoint
-  //   // Content will be centered in the space to the right/left of drawer
-  //   [theme.breakpoints.up("lg")]: {
-  //     maxWidth: theme.breakpoints.values.lg
-  //   }
-  // })
 });
 
 function Sample(props) {
@@ -83,7 +58,6 @@ function Sample(props) {
   return (
     <div className={classes.root}>
       <PrimarySearchAppBar />
-      <Box sx={{ border: "1px solid black" }}></Box>
       <Drawer
         variant="permanent"
         className={classes.drawer}
@@ -97,16 +71,14 @@ function Sample(props) {
         sx={{
           flexGrow: 1,
           paddingTop: "74px",
-          backgroundColor: "pink",
-          border: "1px solid"
+          backgroundColor: "#F2F3F5",
         }}
+        classes={classes.main}
       >
-        {/* <Button className={classes.root}>Hook</Button> */}
-        <Grid container spacing={2}>
+        <Grid container spacing={4}>
           {/* <Grid item xs={12} lg={12} xl={12}>
           <Grid container spacing={2}> */}
           {/* first block */}
-
           <Grid item xs={4}>
             <Grid container spacing={2}>
               <Grid item xs={9}>
@@ -125,10 +97,10 @@ function Sample(props) {
             <Box mt={2}></Box>
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <FormControl sx={{ m: 0, width: "40ch" }} variant="outlined">
+                <FormControl sx={{ m: 0, width: "100%" }} variant="outlined">
                   <InputLabel
                     htmlFor="outlined-adornment-password"
-                    style={{ fontSize: 12 }}
+                    // style={{ fontSize: 12 }}
                   >
                     Balance as of date
                   </InputLabel>
@@ -366,8 +338,12 @@ function Sample(props) {
           </Grid>
           {/* third block */}
           <Grid item xs={4}>
-            <Grid container spacing={1}>
-              <Grid item xs={8}>
+            <Grid container spacing={2}>
+            <Grid item xs={1}>
+                <Typography variant="body1" component="h6">
+                </Typography>
+              </Grid>
+              <Grid item xs={7}>
                 <Typography variant="body1" component="h6">
                   Events
                 </Typography>
@@ -387,7 +363,7 @@ function Sample(props) {
                 </Typography>
               </Grid>
             </Grid>
-            <Box mt={2} sx={{ minWidth: 300, margin: "0 auto" }}>
+            <Box mt={2} p={2} sx={{ maxWidth: 400,  margin: '0 auto', }}>
               <DatePicker />
             </Box>
             <Box mt={2}></Box>
@@ -413,8 +389,4 @@ function Sample(props) {
     </div>
   );
 }
-
-// App.propTypes = {
-//   classes: PropTypes.object.isRequired
-// };
 export default withStyles(styles)(Sample);
