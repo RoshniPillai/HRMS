@@ -339,11 +339,11 @@ function Sample(props) {
           {/* third block */}
           <Grid item xs={4}>
             <Grid container spacing={2}>
-            <Grid item xs={1}>
+            {/* <Grid item xs={1}>
                 <Typography variant="body1" component="h6">
                 </Typography>
-              </Grid>
-              <Grid item xs={7}>
+              </Grid> */}
+              <Grid item xs={8}>
                 <Typography variant="body1" component="h6">
                   Events
                 </Typography>
