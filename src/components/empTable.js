@@ -1,62 +1,103 @@
-import * as React from 'react';
-import { DataGrid } from '@material-ui/data-grid';
-
-const columns = [
-  { field: 'id', headerName: 'ID', width: 90 },
-  {
-    field: 'firstName',
-    headerName: 'First name',
-    width: 150,
-    editable: true,
-  },
-  {
-    field: 'lastName',
-    headerName: 'Last name',
-    width: 150,
-    editable: true,
-  },
-  {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 110,
-    editable: true,
-  },
-  {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params) =>
-      `${params.getValue(params.id, 'firstName') || ''} ${
-        params.getValue(params.id, 'lastName') || ''
-      }`,
-  },
-];
-
-const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-];
+import { DataGrid } from "@material-ui/data-grid";
 
 export default function empTable() {
   return (
-    <div style={{ height: 400, width: '100%' }}>
+    <div style={{ height: 300, width: "100%" }}>
       <DataGrid
         rows={rows}
         columns={columns}
         pageSize={5}
-        checkboxSelection
+        //checkboxSelection
         disableSelectionOnClick
       />
     </div>
   );
 }
+
+const columns = [
+  { field: "id", headerName: "Employee Number", flex: 1 },
+  { field: "employeeName", headerName: "Employee Name", flex: 1 },
+  { field: "position", headerName: "Position", flex: 1 },
+  { field: "workLocation", headerName: "Work Location", flex: 1 },
+  { field: "department", headerName: "Department", flex: 1 },
+  {
+    field: "section",
+    headerName: "section",
+    flex: 1
+  }
+];
+
+const rows = [
+  {
+    id: 1,
+    employeeName: "Snow",
+    position: "HR",
+    workLocation: "abc",
+    department: "IT",
+    section: 35
+  },
+  {
+    id: 2,
+    employeeName: "Lannister",
+    position: "HR",
+    workLocation: "abc",
+    department: "IT",
+    section: 42
+  },
+  {
+    id: 3,
+    employeeName: "Lannister",
+    position: "HR",
+    workLocation: "abc",
+    department: "IT",
+    section: 45
+  },
+  {
+    id: 4,
+    employeeName: "Snow",
+    position: "HR",
+    workLocation: "abc",
+    department: "IT",
+    section: 35
+  },
+  {
+    id: 5,
+    employeeName: "Targaryen",
+    position: "HR",
+    workLocation: "abc",
+    department: "IT",
+    section: null
+  },
+  {
+    id: 6,
+    employeeName: "Melisandre",
+    position: null,
+    workLocation: "abc",
+    department: "IT",
+    section: 150
+  },
+  {
+    id: 7,
+    employeeName: "Clifford",
+    position: "HR",
+    workLocation: "abc",
+    department: "IT",
+    section: 44
+  },
+  {
+    id: 8,
+    employeeName: "Frances",
+    position: "HR",
+    workLocation: "abc",
+    department: "IT",
+    section: 36
+  },
+  {
+    id: 9,
+    employeeName: "Roxie",
+    position: "HR",
+    workLocation: "abc",
+    department: "IT",
+    section: 65
+  }
+];

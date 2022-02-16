@@ -3,30 +3,23 @@ import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@mui/material/Box";
 import Drawer from "@material-ui/core/Drawer";
-import Paper from "@mui/material/Paper";
 import Button from "@material-ui/core/Button";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
-import { Select, MenuItem } from "@material-ui/core";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import EventIcon from "@mui/icons-material/Event";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
 import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import IconButton from "@mui/material/IconButton";
-import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import InputLabel from "@mui/material/InputLabel";
-import DatePicker from "./datePicker";
-import Fab from "@mui/material/Fab";
-import ChevronLeftOutlinedIcon from "@mui/icons-material/ChevronLeftOutlined";
-import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-import empTable from "./component/empTable";
+import SearchIcon from "@mui/icons-material/Search";
+import EmpTable from "./empTable";
 import PrimarySearchAppBar from "./appBar";
 import NavItems from "./NavItems";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormHelperText from "@material-ui/core/FormHelperText";
+import Select from "@material-ui/core/Select";
+import GetAppIcon from "@material-ui/icons/GetApp";
 
 const styles = (theme) => ({
   // The main flex container for the app's layout. Its min-height
@@ -67,7 +60,6 @@ function EmployeeManagementPage(props) {
         classes={{ paper: classes.drawerPaper }}
       >
         <NavItems />
-        {/* <main className={classes.appContent}>drawer content</main> */}
       </Drawer>
       <Box
         p={3}
@@ -126,31 +118,88 @@ function EmployeeManagementPage(props) {
             show filters
           </Grid>
           <Grid item xs={12}>
-            <Box display="flex" justifyContent="flex-end">
-              search box
-            </Box>
+            <Grid container>
+              <Grid item xs={12}>
+                <Box display="flex" justifyContent="flex-end">
+                  <FormControl sx={{ m: 0 }} variant="outlined">
+                    <InputLabel
+                      htmlFor="outlined-adornment-password"
+                      style={{ fontSize: 14 }}
+                    >
+                      Search
+                    </InputLabel>
+                    <OutlinedInput
+                      id="outlined-adornment-password"
+                      type={"text"}
+                      placeholder={""}
+                      value={""}
+                      style={{ fontSize: 10 }}
+                      // onChange={}
+                      endAdornment={
+                        <InputAdornment position="start">
+                          <IconButton aria-label="" edge="end">
+                            <SearchIcon />
+                          </IconButton>
+                        </InputAdornment>
+                      }
+                      label="Password"
+                    />
+                  </FormControl>
+
+                  {/* <Grid item xs={3}>
+              <Box display="flex" justifyContent="flex-end"> */}
+                  <Typography
+                    variant="body1"
+                    component=""
+                    style={{ padding: 10 }}
+                  >
+                    Show
+                  </Typography>
+                  <FormControl className={classes.formControl}>
+                    {/* <InputLabel id="demo-simple-select-label">Select</InputLabel> */}
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      value={10}
+                      // onChange={handleChange}
+                    >
+                      <MenuItem value={10}>10</MenuItem>
+                      <MenuItem value={20}>20</MenuItem>
+                      <MenuItem value={30}>30</MenuItem>
+                    </Select>
+                  </FormControl>
+                  <Typography
+                    variant="body1"
+                    component=""
+                    style={{ padding: 10 }}
+                  >
+                    entries
+                  </Typography>
+                  {/* </Box>
+              </Grid> */}
+                  {/* <Grid item xs={1}> */}
+                  <IconButton aria-label="delete" className={classes.margin}>
+                    <GetAppIcon fontSize="medium" />
+                  </IconButton>
+                </Box>
+              </Grid>
+              {/* </Grid>  */}
+            </Grid>
+            {/* <Box display="flex" justifyContent="flex-end"> */}
+
+            {/* </Box> */}
           </Grid>
           <Grid item xs={12}>
-            <empTable />
+            <Box
+              sx={{
+                flexGrow: 1,
+                paddingTop: "74px",
+                backgroundColor: "#F2F3F5"
+              }}
+            >
+              <EmpTable />
+            </Box>
           </Grid>
-          {/* <Grid item xs={4}>
-            <Grid container>
-              <Grid item xs={9}>
-                <Typography variant="body1" component="h6">
-                  Who's Off
-                </Typography>
-              </Grid>
-              <Grid item xs={3}>
-                <Typography variant="body1" component="h6" align="right">
-                  0 employees
-                </Typography>
-              </Grid>
-            </Grid>
-            <Box mt={2}></Box>
-            <Paper sx={{ padding: "30px 0" }}>
-              <Typography align="center">No one's Off!</Typography>
-            </Paper>
-          </Grid> */}
         </Grid>
       </Box>
     </div>

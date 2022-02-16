@@ -50,10 +50,10 @@ const styles = (theme) => ({
   },
   drawerPaper: {
     width: "inherit"
-  },
+  }
 });
 
-function Sample(props) {
+function DashboardPage(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
@@ -71,7 +71,7 @@ function Sample(props) {
         sx={{
           flexGrow: 1,
           paddingTop: "74px",
-          backgroundColor: "#F2F3F5",
+          backgroundColor: "#F2F3F5"
         }}
         classes={classes.main}
       >
@@ -339,7 +339,7 @@ function Sample(props) {
           {/* third block */}
           <Grid item xs={4}>
             <Grid container spacing={2}>
-            {/* <Grid item xs={1}>
+              {/* <Grid item xs={1}>
                 <Typography variant="body1" component="h6">
                 </Typography>
               </Grid> */}
@@ -363,7 +363,7 @@ function Sample(props) {
                 </Typography>
               </Grid>
             </Grid>
-            <Box mt={2} p={2} sx={{ maxWidth: 400,  margin: '0 auto', }}>
+            <Box mt={2} p={2} sx={{ maxWidth: 400, margin: "0 auto" }}>
               <DatePicker />
             </Box>
             <Box mt={2}></Box>
@@ -389,4 +389,4 @@ function Sample(props) {
     </div>
   );
 }
-export default withStyles(styles)(Sample);
+export default withStyles(styles)(DashboardPage);
