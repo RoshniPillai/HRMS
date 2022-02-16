@@ -7,6 +7,7 @@ import Paper from "@mui/material/Paper";
 import Button from "@material-ui/core/Button";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
+import { Select, MenuItem } from "@material-ui/core";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import EventIcon from "@mui/icons-material/Event";
@@ -23,7 +24,7 @@ import Fab from "@mui/material/Fab";
 import ChevronLeftOutlinedIcon from "@mui/icons-material/ChevronLeftOutlined";
 import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-
+import empTable from "./component/empTable";
 import PrimarySearchAppBar from "./appBar";
 import NavItems from "./NavItems";
 
@@ -113,7 +114,7 @@ function EmployeeManagementPage(props) {
                     variant="outlined"
                     color="primary"
                     size="small"
-                    style={{ marginLeft: 10, padding: 2 }}
+                    style={{ marginLeft: 10, padding: 0 }}
                   >
                     ...
                   </Button>
@@ -121,9 +122,17 @@ function EmployeeManagementPage(props) {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12}></Grid>
-          <Grid item xs={12}></Grid>
-          <Grid item xs={12}></Grid>
+          <Grid item xs={12}>
+            show filters
+          </Grid>
+          <Grid item xs={12}>
+            <Box display="flex" justifyContent="flex-end">
+              search box
+            </Box>
+          </Grid>
+          <Grid item xs={12}>
+            <empTable />
+          </Grid>
           {/* <Grid item xs={4}>
             <Grid container>
               <Grid item xs={9}>
