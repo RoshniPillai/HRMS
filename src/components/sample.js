@@ -130,7 +130,7 @@ function DashboardPage(props) {
                   <CardContent>
                     <Grid container spacing={2}>
                       <Grid item xs={2}>
-                        <FlightTakeoffIcon />
+                        <FlightTakeoffIcon style={{color: '#09bbb8'}} />
                       </Grid>
                       <Grid item xs={10}>
                         <Box component="span">Sick Day off</Box>
@@ -162,7 +162,7 @@ function DashboardPage(props) {
                   <CardContent>
                     <Grid container spacing={2}>
                       <Grid item xs={2}>
-                        <FlightTakeoffIcon />
+                        <FlightTakeoffIcon style={{color: '#09bbb8'}}/>
                       </Grid>
                       <Grid item xs={10}>
                         <Box component="span">Annual vacations</Box>
@@ -204,7 +204,7 @@ function DashboardPage(props) {
                     <CardContent>
                       <Grid container spacing={2}>
                         <Grid item xs={2}>
-                          <EventIcon />
+                          <EventIcon style={{color: '#09bbb8'}}/>
                         </Grid>
                         <Grid item xs={10}>
                           <Typography color="text.secondary" gutterBottom>
@@ -223,11 +223,11 @@ function DashboardPage(props) {
                     <CardContent>
                       <Grid container spacing={0}>
                         <Grid item xs={2}>
-                          <EventIcon />
+                          <EventIcon style={{color: '#09bbb8'}}/>
                         </Grid>
                         <Grid item xs={10}>
                           <Typography color="text.secondary" gutterBottom>
-                            My Approval
+                            My Schedule
                           </Typography>
                           <Link href="#" underline="none">
                             View
@@ -309,9 +309,11 @@ function DashboardPage(props) {
             <Box mt={2}></Box>
             <Grid container spacing={1}>
               <Grid item xs={12}>
-                <Typography variant="body1" component="h6" align="center">
+              <Paper sx={{ padding: "30px 0" }}>
+              <Typography variant="body1" component="h6" align="center">
                   No Announcements
                 </Typography>
+            </Paper>               
               </Grid>
             </Grid>
           </Grid>
@@ -374,9 +376,12 @@ function DashboardPage(props) {
                 </Typography>
               </Grid>
               <Grid item xs={12}>
-                <Typography variant="body1" component="h6" align="left">
+              <Paper sx={{ padding: "30px 0" }}>
+              <Typography variant="body1" component="h6" align="center">
                   No upcoming event
                 </Typography>
+            </Paper>
+               
               </Grid>
             </Grid>
             <Paper />
