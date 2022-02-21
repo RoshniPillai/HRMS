@@ -74,7 +74,11 @@ function NavItems({ classes }) {
         <div className={classes.toolbarIe11}>
           <div className={classes.heading}>
             <Typography variant="title">
-              <img src="" alt="logo" />
+              <img
+                src="https://d2is554mdy16bu.cloudfront.net/assets/zenhr-header-logo-eb82b4c0133ab581dbd9a7121464340445d3d1f8d47ef7e7bcc814c256807333.svg"
+                alt="logo"
+                width="50"
+              />
             </Typography>
           </div>
         </div>
