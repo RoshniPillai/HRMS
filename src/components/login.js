@@ -38,10 +38,7 @@ export default function LoginPage() {
             alignItems: "center"
           }}
         >
-          <img
-            src="https://d2is554mdy16bu.cloudfront.net/assets/zenhr-header-logo-eb82b4c0133ab581dbd9a7121464340445d3d1f8d47ef7e7bcc814c256807333.svg"
-            alt="logo"
-          />
+          <img src="" alt="logo" />
         </Box>
         <Box
           sx={{
@@ -91,7 +88,7 @@ export default function LoginPage() {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2, backgroundColor: '#09bbb8' }}
+              sx={{ mt: 3, mb: 2, backgroundColor: "#09bbb8" }}
             >
               Sign In
             </Button>

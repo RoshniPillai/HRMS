@@ -4,14 +4,16 @@ import EmployeeDirectoryPage from "./components/employeeDirectory";
 import EmployeeManagementPage from "./components/employeeManagement";
 import DashboardPage from "./components/sample";
 import LoginPage from "./components/login";
+import EmployeeOverviewPage from "./components/employeeOverview";
 export default function App() {
   return (
     <div className="App">
-      <LoginPage />
+      {/* <LoginPage /> */}
       {/* <DashboardPage /> */}
       {/* <DashboardWIthDrawer /> */}
       {/* <EmployeeDirectoryPage /> */}
       {/* <EmployeeManagementPage /> */}
+      <EmployeeOverviewPage />
     </div>
   );
 }
