@@ -7,8 +7,8 @@ import LoginPage from "./components/login";
 export default function App() {
   return (
     <div className="App">
-      {/* <LoginPage /> */}
-      <DashboardPage />
+      <LoginPage />
+      {/* <DashboardPage /> */}
       {/* <DashboardWIthDrawer /> */}
       {/* <EmployeeDirectoryPage /> */}
       {/* <EmployeeManagementPage /> */}
