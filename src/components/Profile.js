@@ -8,6 +8,7 @@ import Divider from "@mui/material/Divider";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
+import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -20,12 +21,28 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import IconButton from "@mui/material/IconButton";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import InputLabel from "@mui/material/InputLabel";
+import Avatar from "@mui/material/Avatar";
 import DatePicker from "./datePicker";
 import Fab from "@mui/material/Fab";
 import ChevronLeftOutlinedIcon from "@mui/icons-material/ChevronLeftOutlined";
-import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
+//import ChevronDownOutlinedIcon from "@mui/icons-material/ChevronDownOutlined";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
 
+const buttons = [
+  <Button key="one" color="inherit">
+    List
+  </Button>,
+  <Button key="two" color="inherit">
+    History
+  </Button>,
+  <Button key="three" style={{ backgroundColor: "#09bbb8", color: "#ffffff" }}>
+    Edit
+  </Button>
+];
 export default function ProfilePage() {
+  const [value, setValue] = React.useState(null);
   return (
     <>
       {/* <Box sx={{ flexGrow: 1 }}>
@@ -39,9 +56,9 @@ export default function ProfilePage() {
        
       </Grid>
     </Box> */}
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2} style={{ backgroundColor: "#ffffff" }}>
-          <Grid item xs={3} style={{ backgroundColor: "" }}>
+      <Box sx={{ flexGrow: 1, backgroundColor: "pink" }}>
+        <Grid container spacing={2} style={{ backgroundColor: "pink" }}>
+          <Grid item xs={3} style={{ backgroundColor: "#f2f3f5" }}>
             <Grid container>
               <Grid item xs={6}>
                 <Typography variant="body2" gutterBottom>
@@ -54,7 +71,7 @@ export default function ProfilePage() {
                 </Typography>
               </Grid>
               <Grid item xs={6}>
-                Image
+                <img src="https://via.placeholder.com/90" />
               </Grid>
               <Grid item xs={6}>
                 <Typography variant="caption" gutterBottom>
@@ -71,12 +88,18 @@ export default function ProfilePage() {
                 </Typography>
               </Grid>
               <Grid item xs={12}>
-                <Button size="small" variant="contained">
+                <Button
+                  size="small"
+                  variant="contained"
+                  sx={{ backgroundColor: "#09bbb8" }}
+                >
                   Send Onboarding Package
                 </Button>
               </Grid>
               <Grid item xs={12}>
-                <Divider />
+                <Box mt={2} mb={2}>
+                  <Divider />
+                </Box>
               </Grid>
               <Divider />
               <Grid item xs={6}>
@@ -130,7 +153,9 @@ export default function ProfilePage() {
                 </Typography>
               </Grid>
               <Grid item xs={12}>
-                <Divider />
+                <Box mt={2} mb={2}>
+                  <Divider />
+                </Box>
               </Grid>
               <Grid item xs={12}>
                 <Typography variant="body2" gutterBottom>
@@ -155,7 +180,239 @@ export default function ProfilePage() {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={9} style={{ border: "1px solid" }}></Grid>
+
+          <Grid item xs={9} style={{ backgroundColor: "#f2f3f5" }}>
+            <Grid container>
+              <Grid item xs={12}>
+                <Paper variant="outlined">
+                  <Box m={2}>
+                    <Grid container>
+                      <Grid item xs={9}>
+                        <Typography variant="body2" gutterBottom>
+                          Professional Info
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={3}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "end"
+                          }}
+                        >
+                          <ButtonGroup
+                            size="small"
+                            aria-label="small button group"
+                          >
+                            {buttons}
+                          </ButtonGroup>
+                        </Box>
+                      </Grid>
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Grid container>
+                        <Grid xs={4}>
+                          <Typography variant="caption" gutterBottom>
+                            Job Title
+                          </Typography>
+                          <Typography variant="subtitle2" gutterBottom>
+                            HR <Link href="#">Details</Link>
+                          </Typography>
+                          <Typography variant="caption" gutterBottom>
+                            Work Type
+                          </Typography>
+                          <Typography variant="subtitle2" gutterBottom>
+                            Full Time
+                          </Typography>
+                          <Typography variant="caption" gutterBottom>
+                            Direct Manager
+                          </Typography>
+                          <Typography variant="subtitle2" gutterBottom>
+                            Javed Khan
+                          </Typography>
+                          <Typography variant="caption" gutterBottom>
+                            Supervisor
+                          </Typography>
+                          <Typography variant="subtitle2" gutterBottom>
+                            Joegracia
+                          </Typography>
+                        </Grid>
+                        <Grid xs={3}>
+                          <Typography variant="caption" gutterBottom>
+                            Branch
+                          </Typography>
+                          <Typography variant="subtitle2" gutterBottom>
+                            i-See
+                          </Typography>
+                        </Grid>
+                        <Grid xs={3}>
+                          <Typography variant="caption" gutterBottom>
+                            Hiring Date
+                          </Typography>
+                          <Typography variant="subtitle2" gutterBottom>
+                            Jan 01, 2022
+                          </Typography>
+                          <Typography variant="caption" gutterBottom>
+                            End of Probation
+                          </Typography>
+                          <Typography variant="subtitle2" gutterBottom>
+                            Jan 30, 2022
+                          </Typography>
+                          <Typography variant="caption" gutterBottom>
+                            Period of employment
+                          </Typography>
+                          <Typography
+                            variant="subtitle2"
+                            gutterBottom
+                          ></Typography>
+                        </Grid>
+                        <Grid xs={2}></Grid>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                </Paper>
+              </Grid>
+              <Box m={2}></Box>
+              <Grid item xs={12}>
+                <Paper variant="outlined">
+                  <Box m={2}>
+                    <Grid container>
+                      <Grid item xs={9}>
+                        <Typography variant="body2" gutterBottom>
+                          Salary Package
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={3}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "end"
+                          }}
+                        >
+                          <ButtonGroup
+                            size="small"
+                            aria-label="small button group"
+                          >
+                            {buttons}
+                          </ButtonGroup>
+                        </Box>
+                      </Grid>
+                      <Grid item xs={12}>
+                        <Typography variant="body2" gutterBottom>
+                          TBD
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                </Paper>
+              </Grid>
+              <Box m={2}></Box>
+
+              <Grid item xs={12}>
+                <Paper variant="outlined" style={{ backgroundColor: "" }}>
+                  <Box m={2}>
+                    <Grid container spacing={2}>
+                      <Grid item xs={8}>
+                        <Typography variant="body2" gutterBottom>
+                          TimeOff Balance
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={4}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "end",
+                            justifyContent: "end"
+                          }}
+                        >
+                          <form action="/">
+                            Balance of date:
+                            <input type="date" id="birthday" name="birthday" />
+                          </form>
+                        </Box>
+                      </Grid>
+                    </Grid>
+                    <Grid container spacing={4}>
+                      <Grid item={5}>
+                        <Paper variant="outlined">
+                          <Box
+                            m={3}
+                            sx={{
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              flexDirection: "column"
+                            }}
+                          >
+                            <Avatar sx={{ bgcolor: "#F2F3F5" }}>
+                              <FlightTakeoffIcon sx={{ color: "#09bbb8" }} />
+                            </Avatar>
+                            <Typography
+                              variant="caption"
+                              gutterBottom
+                              style={{ color: "#09bbb8" }}
+                            >
+                              Sick Day Off
+                            </Typography>
+                            <Typography variant="caption" gutterBottom>
+                              Available Balance
+                            </Typography>
+                            <Typography variant="subtitle2" gutterBottom>
+                              15.00
+                            </Typography>
+                            <Typography variant="caption" gutterBottom>
+                              Upto end of year
+                            </Typography>
+                            <Typography variant="subtitle2" gutterBottom>
+                              15.00
+                            </Typography>
+                          </Box>
+                        </Paper>
+                      </Grid>
+
+                      <Grid item={5}>
+                        <Paper variant="outlined">
+                          <Box
+                            m={3}
+                            sx={{
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              flexDirection: "column"
+                            }}
+                          >
+                            <Avatar sx={{ bgcolor: "#F2F3F5" }}>
+                              <FlightTakeoffIcon sx={{ color: "#09bbb8" }} />
+                            </Avatar>
+                            <Typography
+                              variant="caption"
+                              gutterBottom
+                              style={{ color: "#09bbb8" }}
+                            >
+                              Sick Day Off
+                            </Typography>
+                            <Typography variant="caption" gutterBottom>
+                              Available Balance
+                            </Typography>
+                            <Typography variant="subtitle2" gutterBottom>
+                              15.00
+                            </Typography>
+                            <Typography variant="caption" gutterBottom>
+                              Upto end of year
+                            </Typography>
+                            <Typography variant="subtitle2" gutterBottom>
+                              15.00
+                            </Typography>
+                          </Box>
+                        </Paper>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                </Paper>
+              </Grid>
+            </Grid>
+          </Grid>
         </Grid>
       </Box>
     </>

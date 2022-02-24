@@ -121,12 +121,12 @@ function EmployeeOverviewPage(props) {
               onChange={handleChange}
               aria-label="basic tabs example"
             >
-              <Tab label="Item One" {...a11yProps(0)} />
-              <Tab label="Item Two" {...a11yProps(1)} />
-              <Tab label="Item Three" {...a11yProps(2)} />
-              <Tab label="Item One" {...a11yProps(3)} />
+              <Tab label="Profile" {...a11yProps(0)} />
+              <Tab label="Bank Accounts" {...a11yProps(1)} />
+              <Tab label="Family Info" {...a11yProps(2)} />
+              {/* <Tab label="Item One" {...a11yProps(3)} />
               <Tab label="Item Two" {...a11yProps(4)} />
-              <Tab label="Item Three" {...a11yProps(5)} />
+              <Tab label="Item Three" {...a11yProps(5)} /> */}
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
@@ -138,7 +138,7 @@ function EmployeeOverviewPage(props) {
           <TabPanel value={value} index={2}>
             Item Three
           </TabPanel>
-          <TabPanel value={value} index={3}>
+          {/* <TabPanel value={value} index={3}>
             Item Three
           </TabPanel>
           <TabPanel value={value} index={4}>
@@ -146,7 +146,7 @@ function EmployeeOverviewPage(props) {
           </TabPanel>
           <TabPanel value={value} index={5}>
             Item Three
-          </TabPanel>
+          </TabPanel> */}
         </Box>
       </Box>
     </div>
