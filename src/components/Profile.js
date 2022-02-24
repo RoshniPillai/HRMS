@@ -390,7 +390,7 @@ export default function ProfilePage() {
                               gutterBottom
                               style={{ color: "#09bbb8" }}
                             >
-                              Sick Day Off
+                              Annual Vacations
                             </Typography>
                             <Typography variant="caption" gutterBottom>
                               Available Balance
