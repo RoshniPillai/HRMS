@@ -117,76 +117,59 @@ function EmployeeManagementPage(props) {
             show filters
           </Grid>
           <Grid item xs={12}>
-            <Grid container>
-              <Grid item xs={12}>
-                <Box display="flex" justifyContent="flex-end">
-                  <FormControl sx={{ m: 0 }} variant="outlined">
-                    <InputLabel
-                      htmlFor="outlined-adornment-password"
-                      style={{ fontSize: 14 }}
-                    >
-                      Search
-                    </InputLabel>
-                    <OutlinedInput
-                      id="outlined-adornment-password"
-                      type={"text"}
-                      placeholder={""}
-                      value={""}
-                      style={{ fontSize: 10 }}
-                      // onChange={}
-                      endAdornment={
-                        <InputAdornment position="start">
-                          <IconButton aria-label="" edge="end">
-                            <SearchIcon />
-                          </IconButton>
-                        </InputAdornment>
-                      }
-                      label="Password"
-                    />
-                  </FormControl>
-
-                  {/* <Grid item xs={3}>
-              <Box display="flex" justifyContent="flex-end"> */}
-                  <Typography
-                    variant="body1"
-                    component=""
-                    style={{ padding: 10 }}
-                  >
-                    Show
-                  </Typography>
-                  <FormControl className={classes.formControl}>
-                    {/* <InputLabel id="demo-simple-select-label">Select</InputLabel> */}
-                    <Select
-                      labelId="demo-simple-select-label"
-                      id="demo-simple-select"
-                      value={10}
-                      // onChange={handleChange}
-                    >
-                      <MenuItem value={10}>10</MenuItem>
-                      <MenuItem value={20}>20</MenuItem>
-                      <MenuItem value={30}>30</MenuItem>
-                    </Select>
-                  </FormControl>
-                  <Typography
-                    variant="body1"
-                    component=""
-                    style={{ padding: 10 }}
-                  >
-                    entries
-                  </Typography>
-                  {/* </Box>
-              </Grid> */}
-                  {/* <Grid item xs={1}> */}
-                  <IconButton aria-label="delete" className={classes.margin}>
-                    <GetAppIcon fontSize="medium" />
-                  </IconButton>
-                </Box>
-              </Grid>
-              {/* </Grid>  */}
-            </Grid>
-            {/* <Box display="flex" justifyContent="flex-end"> */}
-
-            {/* </Box> */}
+            <Box
+              m={2}
+              display="flex"
+              flexDirection="row"
+              alignItems="end"
+              justifyContent="end"
+            >
+              <FormControl sx={{ m: 0 }} variant="outlined">
+                <InputLabel
+                  htmlFor="outlined-adornment-password"
+                  //style={{ fontSize: 14 }}
+                >
+                  Search
+                </InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-password"
+                  type={"text"}
+                  placeholder={""}
+                  value={""}
+                  //style={{ fontSize: 10 }}
+                  // onChange={}
+                  endAdornment={
+                    <InputAdornment position="start">
+                      <IconButton aria-label="" edge="end">
+                        <SearchIcon />
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  label="Password"
+                />
+              </FormControl>
+              <Typography variant="body1" component="" style={{ padding: 10 }}>
+                Show
+              </Typography>
+              <FormControl>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={10}
+                  // onChange={handleChange}
+                >
+                  <MenuItem value={10}>10</MenuItem>
+                  <MenuItem value={20}>20</MenuItem>
+                  <MenuItem value={30}>30</MenuItem>
+                </Select>
+              </FormControl>
+              <Typography variant="body1" component="" style={{ padding: 10 }}>
+                entries
+              </Typography>
+              <IconButton aria-label="delete">
+                <GetAppIcon fontSize="medium" />
+              </IconButton>
+            </Box>
           </Grid>
           <Grid item xs={12}>
             <Box

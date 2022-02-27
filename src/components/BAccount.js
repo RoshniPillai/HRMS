@@ -1,52 +1,17 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Drawer from "@material-ui/core/Drawer";
 import Divider from "@mui/material/Divider";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
 import Select from "@mui/material/Select";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import EventIcon from "@mui/icons-material/Event";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
-import InputAdornment from "@mui/material/InputAdornment";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import IconButton from "@mui/material/IconButton";
-import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
-import Avatar from "@mui/material/Avatar";
-import DatePicker from "./datePicker";
-import Fab from "@mui/material/Fab";
-import ChevronLeftOutlinedIcon from "@mui/icons-material/ChevronLeftOutlined";
-//import ChevronDownOutlinedIcon from "@mui/icons-material/ChevronDownOutlined";
-import ButtonGroup from "@mui/material/ButtonGroup";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-
-const buttons = [
-  <Button key="one" color="inherit">
-    List
-  </Button>,
-  <Button key="two" color="inherit">
-    History
-  </Button>,
-  <Button key="three" style={{ backgroundColor: "#09bbb8", color: "#ffffff" }}>
-    Edit
-  </Button>
-];
 export default function BankAccountPage() {
-  const [value, setValue] = React.useState(true);
+  const [value, setValue] = React.useState(false);
   const [name, setName] = React.useState("");
   const [age, setAge] = React.useState("");
 
@@ -174,7 +139,10 @@ export default function BankAccountPage() {
                                 backgroundColor: "#09bbb8"
                               }}
                             >
-                              <InputLabel id="demo-simple-select-helper-label">
+                              <InputLabel
+                                id="demo-simple-select-helper-label"
+                                sx={{ color: "#ffffff" }}
+                              >
                                 Country
                               </InputLabel>
                               <Select
@@ -286,13 +254,17 @@ export default function BankAccountPage() {
                             m={0}
                             sx={{
                               width: "10%",
-                              position: "relative",
-                              top: 0,
                               backgroundColor: "#f2f3f5"
                             }}
-                            component="span"
                           >
-                            <Typography> %</Typography>
+                            <Typography
+                              variant="inherit"
+                              component="div"
+                              align="center"
+                              style={{ position: "relative", top: 15 }}
+                            >
+                              %
+                            </Typography>
                           </Box>
 
                           {/* <button id="up" class="btn btn-default" onclick="up('10')"><RemoveIcon size="small" /></button> */}

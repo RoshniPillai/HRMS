@@ -3,8 +3,6 @@ import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@mui/material/Box";
 import Drawer from "@material-ui/core/Drawer";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -12,6 +10,7 @@ import PrimarySearchAppBar from "./appBar";
 import NavItems from "./NavItems";
 import ProfilePage from "./Profile";
 import BankAccountPage from "./BAccount";
+import FamilyInfoPage from "./familyInfo";
 
 const styles = (theme) => ({
   // The main flex container for the app's layout. Its min-height
@@ -121,7 +120,7 @@ function EmployeeOverviewPage(props) {
             <BankAccountPage />
           </TabPanel>
           <TabPanel value={value} index={2}>
-            Item Three
+            <FamilyInfoPage />
           </TabPanel>
           {/* <TabPanel value={value} index={3}>
             Item Three
