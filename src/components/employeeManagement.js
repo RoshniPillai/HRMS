@@ -17,7 +17,6 @@ import EmpTable from "./empTable";
 import PrimarySearchAppBar from "./appBar";
 import NavItems from "./NavItems";
 import MenuItem from "@material-ui/core/MenuItem";
-import FormHelperText from "@material-ui/core/FormHelperText";
 import Select from "@material-ui/core/Select";
 import GetAppIcon from "@material-ui/icons/GetApp";
 

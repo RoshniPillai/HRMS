@@ -10,7 +10,6 @@ import Box from "@mui/material/Box";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import Typography from "@material-ui/core/Typography";
 import MailIcon from "@material-ui/icons/Mail";
-import DeleteIcon from "@material-ui/icons/Delete";
 import ReportIcon from "@material-ui/icons/Report";
 import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";

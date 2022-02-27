@@ -5,28 +5,13 @@ import Box from "@mui/material/Box";
 import Drawer from "@material-ui/core/Drawer";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import EventIcon from "@mui/icons-material/Event";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
-import InputAdornment from "@mui/material/InputAdornment";
-import FormControl from "@mui/material/FormControl";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import IconButton from "@mui/material/IconButton";
-import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
-import InputLabel from "@mui/material/InputLabel";
-import DatePicker from "./datePicker";
-import Fab from "@mui/material/Fab";
-import ChevronLeftOutlinedIcon from "@mui/icons-material/ChevronLeftOutlined";
-import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import PrimarySearchAppBar from "./appBar";
 import NavItems from "./NavItems";
 import ProfilePage from "./Profile";
+import BankAccountPage from "./BAccount";
 
 const styles = (theme) => ({
   // The main flex container for the app's layout. Its min-height
@@ -67,7 +52,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ pt: 2 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -133,7 +118,7 @@ function EmployeeOverviewPage(props) {
             <ProfilePage />
           </TabPanel>
           <TabPanel value={value} index={1}>
-            Item Two
+            <BankAccountPage />
           </TabPanel>
           <TabPanel value={value} index={2}>
             Item Three
