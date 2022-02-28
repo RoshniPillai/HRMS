@@ -8,12 +8,12 @@ import EmployeeOverviewPage from "./components/employeeOverview";
 export default function App() {
   return (
     <div className="App">
-      <LoginPage />
+      {/* <LoginPage /> */}
       {/* <DashboardPage /> */}
       {/* <DashboardWIthDrawer /> */}
       {/* <EmployeeDirectoryPage /> */}
       {/* <EmployeeManagementPage /> */}
-      {/* <EmployeeOverviewPage /> */}
+      <EmployeeOverviewPage />
     </div>
   );
 }
