@@ -49,110 +49,111 @@ const styles = (theme) => ({
 function EmployeeDirectoryPage(props) {
   const { classes } = props;
   return (
-    <div className={classes.root}>
-      <PrimarySearchAppBar />
-      <Drawer
-        variant="permanent"
-        className={classes.drawer}
-        classes={{ paper: classes.drawerPaper }}
-      >
-        <NavItems />
-        {/* <main className={classes.appContent}>drawer content</main> */}
-      </Drawer>
-      <Box
-        p={3}
-        sx={{
-          flexGrow: 1,
-          paddingTop: "74px",
-          backgroundColor: "#F2F3F5"
-        }}
-        classes={classes.main}
-      >
-        <Box p={1} sx={{ bgcolor: "#FFFFFF" }}>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <Typography
-                variant="body"
-                gutterBottom
-                component="div"
-                align="left"
-              >
-                Employees Directory
-              </Typography>
-              <Divider />
-            </Grid>
-            <Grid item xs={4}>
-              <Typography
-                variant="body"
-                component="div"
-                align="right"
-                style={{ paddingTop: "10px" }}
-              >
-                J
-              </Typography>
-            </Grid>
-            <Grid item xs={4}>
-              <Typography
-                variant="body"
-                component="div"
-                style={{ paddingTop: "10px" }}
-              >
-                All
-              </Typography>
-            </Grid>
-            <Grid item xs={4}>
-              <FormControl sx={{ m: 0 }} variant="outlined">
-                <InputLabel
-                  htmlFor="outlined-adornment-password"
-                  style={{ fontSize: 14 }}
-                >
-                  Search
-                </InputLabel>
-                <OutlinedInput
-                  id="outlined-adornment-password"
-                  type={"text"}
-                  placeholder={""}
-                  value={""}
-                  style={{ fontSize: 10, minWidth: 500 }}
-                  // onChange={}
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <IconButton aria-label="" edge="end">
-                        <SearchIcon />
-                      </IconButton>
-                    </InputAdornment>
-                  }
-                  label="Password"
-                />
-              </FormControl>
-            </Grid>
+    // <div className={classes.root}>
+    //   <PrimarySearchAppBar />
+    //   <Drawer
+    //     variant="permanent"
+    //     className={classes.drawer}
+    //     classes={{ paper: classes.drawerPaper }}
+    //   >
+    //     <NavItems />
+    //    </Drawer>
+    // <Box
+    //   p={3}
+    //   sx={{
+    //     flexGrow: 1,
+    //     paddingTop: "74px",
+    //     backgroundColor: "#F2F3F5"
+    //   }}
+    //   classes={classes.main}
+    // >
+    <>
+      <Box p={1} sx={{ bgcolor: "#FFFFFF" }}>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <Typography
+              variant="body"
+              gutterBottom
+              component="div"
+              align="left"
+            >
+              Employees Directory
+            </Typography>
+            <Divider />
           </Grid>
-        </Box>
-        <Box mt={4} ml={2}>
-          <Grid container spacing={2}>
-            <Card sx={{ minWidth: 250, textAlign: "center" }}>
-              <CardContent>
-                <Typography
-                  sx={{ fontSize: 14 }}
-                  color="text.secondary"
-                  gutterBottom
-                ></Typography>
-                <PersonIcon fontSize="large" />
-                <Typography sx={{ mb: 0 }} color="text.secondary">
-                  Javed Khan
-                </Typography>
-                <Typography variant="caption" sx={{ fontSize: 10 }}>
-                  HR
-                  <br />
-                  {/* <MailIcon size="small"/> */}
-                  Javed@i-see.io
-                </Typography>
-              </CardContent>
-            </Card>
+          <Grid item xs={4}>
+            <Typography
+              variant="body"
+              component="div"
+              align="right"
+              style={{ paddingTop: "10px" }}
+            >
+              J
+            </Typography>
           </Grid>
-        </Box>
+          <Grid item xs={4}>
+            <Typography
+              variant="body"
+              component="div"
+              style={{ paddingTop: "10px" }}
+            >
+              All
+            </Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <FormControl sx={{ m: 0 }} variant="outlined">
+              <InputLabel
+                htmlFor="outlined-adornment-password"
+                style={{ fontSize: 14 }}
+              >
+                Search
+              </InputLabel>
+              <OutlinedInput
+                id="outlined-adornment-password"
+                type={"text"}
+                placeholder={""}
+                value={""}
+                style={{ fontSize: 10, minWidth: 200 }}
+                // onChange={}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton aria-label="" edge="end">
+                      <SearchIcon />
+                    </IconButton>
+                  </InputAdornment>
+                }
+                label="Password"
+              />
+            </FormControl>
+          </Grid>
+        </Grid>
       </Box>
-    </div>
+      <Box mt={4} ml={2}>
+        <Grid container spacing={2}>
+          <Card sx={{ minWidth: 250, textAlign: "center" }}>
+            <CardContent>
+              <Typography
+                sx={{ fontSize: 14 }}
+                color="text.secondary"
+                gutterBottom
+              ></Typography>
+              <PersonIcon fontSize="large" />
+              <Typography sx={{ mb: 0 }} color="text.secondary">
+                Javed Khan
+              </Typography>
+              <Typography variant="caption" sx={{ fontSize: 10 }}>
+                HR
+                <br />
+                {/* <MailIcon size="small"/> */}
+                Javed@i-see.io
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Box>
+    </>
+    //</Box>
+    // </div>
   );
 }
 export default withStyles(styles)(EmployeeDirectoryPage);

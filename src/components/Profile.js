@@ -72,7 +72,7 @@ export default function ProfilePage() {
                 <Button
                   size="small"
                   variant="contained"
-                  sx={{ backgroundColor: "#09bbb8" }}
+                  sx={{ backgroundColor: "#09bbb8 !important" }}
                 >
                   Send Onboarding Package
                 </Button>

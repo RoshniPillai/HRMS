@@ -80,49 +80,49 @@ function EmployeeOverviewPage(props) {
     setValue(newValue);
   };
   return (
-    <div className={classes.root}>
-      <PrimarySearchAppBar />
-      <Drawer
-        variant="permanent"
-        className={classes.drawer}
-        classes={{ paper: classes.drawerPaper }}
-      >
-        <NavItems />
-      </Drawer>
-      <Box
-        p={3}
-        sx={{
-          flexGrow: 1,
-          paddingTop: "74px",
-          backgroundColor: "#F2F3F5"
-        }}
-        classes={classes.main}
-      >
-        <Box sx={{ width: "100%" }}>
-          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              aria-label="basic tabs example"
-            >
-              <Tab label="Profile" {...a11yProps(0)} />
-              <Tab label="Bank Accounts" {...a11yProps(1)} />
-              <Tab label="Family Info" {...a11yProps(2)} />
-              {/* <Tab label="Item One" {...a11yProps(3)} />
+    // <div className={classes.root}>
+    //   <PrimarySearchAppBar />
+    //   <Drawer
+    //     variant="permanent"
+    //     className={classes.drawer}
+    //     classes={{ paper: classes.drawerPaper }}
+    //   >
+    //     <NavItems />
+    //   </Drawer>
+    //   <Box
+    //     p={3}
+    //     sx={{
+    //       flexGrow: 1,
+    //       paddingTop: "74px",
+    //       backgroundColor: "#F2F3F5"
+    //     }}
+    //     classes={classes.main}
+    //   >
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
+          <Tab label="Profile" {...a11yProps(0)} />
+          <Tab label="Bank Accounts" {...a11yProps(1)} />
+          <Tab label="Family Info" {...a11yProps(2)} />
+          {/* <Tab label="Item One" {...a11yProps(3)} />
               <Tab label="Item Two" {...a11yProps(4)} />
               <Tab label="Item Three" {...a11yProps(5)} /> */}
-            </Tabs>
-          </Box>
-          <TabPanel value={value} index={0}>
-            <ProfilePage />
-          </TabPanel>
-          <TabPanel value={value} index={1}>
-            <BankAccountPage />
-          </TabPanel>
-          <TabPanel value={value} index={2}>
-            <FamilyInfoPage />
-          </TabPanel>
-          {/* <TabPanel value={value} index={3}>
+        </Tabs>
+      </Box>
+      <TabPanel value={value} index={0}>
+        <ProfilePage />
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <BankAccountPage />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <FamilyInfoPage />
+      </TabPanel>
+      {/* <TabPanel value={value} index={3}>
             Item Three
           </TabPanel>
           <TabPanel value={value} index={4}>
@@ -131,9 +131,9 @@ function EmployeeOverviewPage(props) {
           <TabPanel value={value} index={5}>
             Item Three
           </TabPanel> */}
-        </Box>
-      </Box>
-    </div>
+    </Box>
+    //   </Box>
+    // </div>
   );
 }
 export default withStyles(styles)(EmployeeOverviewPage);
