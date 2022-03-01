@@ -185,6 +185,16 @@ export default function PrimarySearchAppBar() {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
+            <Box m={2}>
+              <IconButton
+                size="small"
+                aria-label=""
+                //color=""
+                sx={{ color: "#ffffff !important" }}
+              >
+                i-See
+              </IconButton>
+            </Box>
             <IconButton
               size="large"
               edge="end"
