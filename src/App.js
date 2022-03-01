@@ -9,11 +9,6 @@ export default function App() {
   return (
     <div className="App">
       <LoginPage />
-      {/* <DashboardPage /> */}
-      {/* <DashboardWIthDrawer /> */}
-      {/* <EmployeeDirectoryPage /> */}
-      {/* <EmployeeManagementPage /> */}
-      {/* <EmployeeOverviewPage /> */}
     </div>
   );
 }

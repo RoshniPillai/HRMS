@@ -130,25 +130,131 @@ function EmployeeDirectoryPage(props) {
       </Box>
       <Box mt={4} ml={2}>
         <Grid container spacing={2}>
-          <Card sx={{ minWidth: 250, textAlign: "center" }}>
-            <CardContent>
-              <Typography
-                sx={{ fontSize: 14 }}
-                color="text.secondary"
-                gutterBottom
-              ></Typography>
-              <PersonIcon fontSize="large" />
-              <Typography sx={{ mb: 0 }} color="text.secondary">
-                Javed Khan
-              </Typography>
-              <Typography variant="caption" sx={{ fontSize: 10 }}>
-                HR
-                <br />
-                {/* <MailIcon size="small"/> */}
-                Javed@i-see.io
-              </Typography>
-            </CardContent>
-          </Card>
+          <Grid item xs={3}>
+            <Card sx={{ minWidth: 250, textAlign: "center" }}>
+              <CardContent>
+                <Typography
+                  sx={{ fontSize: 14 }}
+                  color="text.secondary"
+                  gutterBottom
+                ></Typography>
+                <PersonIcon fontSize="large" />
+                <Typography sx={{ mb: 0 }} color="text.secondary">
+                  Javed Khan
+                </Typography>
+                <Typography variant="caption" sx={{ fontSize: 10 }}>
+                  HR
+                  <br />
+                  {/* <MailIcon size="small"/> */}
+                  Javed@i-see.io
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={3}>
+            <Card sx={{ minWidth: 250, textAlign: "center" }}>
+              <CardContent>
+                <Typography
+                  sx={{ fontSize: 14 }}
+                  color="text.secondary"
+                  gutterBottom
+                ></Typography>
+                <PersonIcon fontSize="large" />
+                <Typography sx={{ mb: 0 }} color="text.secondary">
+                  Jenny Tonby
+                </Typography>
+                <Typography variant="caption" sx={{ fontSize: 10 }}>
+                  HR
+                  <br />
+                  Jenny@i-see.io
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={3}>
+            <Card sx={{ minWidth: 250, textAlign: "center" }}>
+              <CardContent>
+                <Typography
+                  sx={{ fontSize: 14 }}
+                  color="text.secondary"
+                  gutterBottom
+                ></Typography>
+                <PersonIcon fontSize="large" />
+                <Typography sx={{ mb: 0 }} color="text.secondary">
+                  Maria
+                </Typography>
+                <Typography variant="caption" sx={{ fontSize: 10 }}>
+                  HR
+                  <br />
+                  {/* <MailIcon size="small"/> */}
+                  Maria@i-see.io
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={3}>
+            <Card sx={{ minWidth: 250, textAlign: "center" }}>
+              <CardContent>
+                <Typography
+                  sx={{ fontSize: 14 }}
+                  color="text.secondary"
+                  gutterBottom
+                ></Typography>
+                <PersonIcon fontSize="large" />
+                <Typography sx={{ mb: 0 }} color="text.secondary">
+                  John J
+                </Typography>
+                <Typography variant="caption" sx={{ fontSize: 10 }}>
+                  HR
+                  <br />
+                  {/* <MailIcon size="small"/> */}
+                  John@i-see.io
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={3}>
+            <Card sx={{ minWidth: 250, textAlign: "center" }}>
+              <CardContent>
+                <Typography
+                  sx={{ fontSize: 14 }}
+                  color="text.secondary"
+                  gutterBottom
+                ></Typography>
+                <PersonIcon fontSize="large" />
+                <Typography sx={{ mb: 0 }} color="text.secondary">
+                  Neil
+                </Typography>
+                <Typography variant="caption" sx={{ fontSize: 10 }}>
+                  HR
+                  <br />
+                  {/* <MailIcon size="small"/> */}
+                  Neil@i-see.io
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={3}>
+            <Card sx={{ minWidth: 250, textAlign: "center" }}>
+              <CardContent>
+                <Typography
+                  sx={{ fontSize: 14 }}
+                  color="text.secondary"
+                  gutterBottom
+                ></Typography>
+                <PersonIcon fontSize="large" />
+                <Typography sx={{ mb: 0 }} color="text.secondary">
+                  Jeff Alonso
+                </Typography>
+                <Typography variant="caption" sx={{ fontSize: 10 }}>
+                  HR
+                  <br />
+                  {/* <MailIcon size="small"/> */}
+                  JeffAlonso@i-see.io
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
       </Box>
     </>

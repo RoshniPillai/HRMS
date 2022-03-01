@@ -10,6 +10,7 @@ import Button from "@mui/material/Button";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import Avatar from "@mui/material/Avatar";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import Image from "material-ui-image";
 
 const buttons = [
   <Button key="one" color="inherit">
@@ -52,7 +53,12 @@ export default function ProfilePage() {
                 </Typography>
               </Grid>
               <Grid item xs={6}>
-                <img src="https://via.placeholder.com/90" />
+                <img
+                  alt=""
+                  src="https://mui.com/static/images/avatar/2.jpg"
+                  width="120px"
+                />
+                {/* <img src="https://mui.com/static/images/avatar/2.jpg" alt="" /> */}
               </Grid>
               <Grid item xs={6}>
                 <Typography variant="caption" gutterBottom>
