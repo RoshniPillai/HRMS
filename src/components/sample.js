@@ -178,7 +178,7 @@ function DashboardPage(props) {
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                    onClick={handleDrawerOpen}
+                    //onClick={handleDrawerOpen}
                     edge="end"
                     sx={{ ...open }}
                   >
@@ -194,7 +194,7 @@ function DashboardPage(props) {
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                    onClick={handleDrawerOpen}
+                    //onClick={handleDrawerOpen}
                     edge="end"
                     sx={{ ...open }}
                   >
@@ -207,7 +207,7 @@ function DashboardPage(props) {
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                    onClick={handleDrawerOpen}
+                    //onClick={handleDrawerOpen}
                     edge="end"
                     sx={{ ...open }}
                   >
@@ -220,7 +220,7 @@ function DashboardPage(props) {
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                    onClick={handleDrawerOpen}
+                    // onClick={handleDrawerOpen}
                     edge="end"
                     sx={{ ...open }}
                   >
