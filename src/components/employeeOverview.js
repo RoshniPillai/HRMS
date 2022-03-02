@@ -113,6 +113,7 @@ function EmployeeOverviewPage(props) {
     <Box sx={{ width: "100%" }}>
       <Box
         sx={{
+          maxWidth: 1920,
           borderBottom: 1,
           borderColor: "divider",
           display: "flex",
@@ -121,7 +122,7 @@ function EmployeeOverviewPage(props) {
           alignItems: "center",
           width: "fit-content",
           "& hr": {
-            m: 1.5
+            m: 1
           }
         }}
       >
@@ -134,7 +135,7 @@ function EmployeeOverviewPage(props) {
           // style={{ padding: "0 20px" }}
         >
           <Tab wrapped label="Profile" {...a11yProps(0)} />
-          <Divider orientation="vertical" />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Bank Accounts" {...a11yProps(1)} />
           <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Family Info" {...a11yProps(2)} />
