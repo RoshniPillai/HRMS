@@ -56,7 +56,7 @@ export default function ProfilePage() {
                 <img
                   alt=""
                   src="https://mui.com/static/images/avatar/2.jpg"
-                  width="180px"
+                  width="100px"
                 />
                 {/* <img src="https://mui.com/static/images/avatar/2.jpg" alt="" /> */}
               </Grid>
