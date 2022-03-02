@@ -111,22 +111,12 @@ function EmployeeOverviewPage(props) {
     //     classes={classes.main}
     //   >
     <Box sx={{ width: "100%" }}>
-      {/* <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
-        <Tabs value={value} onChange={handleChange11}>
-          <Tab label="Precios" />
-          <Tab label="Usuarios" />
-          <Tab label="Plan" />
-        </Tabs>
-        <Tabs value={value - 3} onChange={handleChange2}>
-          <Tab label="Empleados" />
-        </Tabs>
-      </Box> */}
       <Box
         sx={{
           borderBottom: 1,
           borderColor: "divider",
           display: "flex",
-          justifyContent: "left",
+          justifyContent: "center",
           flexWrap: "wrap",
           alignItems: "center",
           width: "fit-content",
@@ -144,7 +134,7 @@ function EmployeeOverviewPage(props) {
           // style={{ padding: "0 20px" }}
         >
           <Tab wrapped label="Profile" {...a11yProps(0)} />
-          <Divider orientation="vertical" flexItem />
+          <Divider orientation="vertical" />
           <Tab wrapped label="Bank Accounts" {...a11yProps(1)} />
           <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Family Info" {...a11yProps(2)} />
