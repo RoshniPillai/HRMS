@@ -11,6 +11,7 @@ import NavItems from "./NavItems";
 import ProfilePage from "./Profile";
 import BankAccountPage from "./BAccount";
 import FamilyInfoPage from "./familyInfo";
+import Divider from "@mui/material/Divider";
 
 const styles = (theme) => ({
   // The main flex container for the app's layout. Its min-height
@@ -126,7 +127,12 @@ function EmployeeOverviewPage(props) {
           borderColor: "divider",
           display: "flex",
           justifyContent: "left",
-          flexWrap: "wrap"
+          flexWrap: "wrap",
+          alignItems: "center",
+          width: "fit-content",
+          "& hr": {
+            m: 1.5
+          }
         }}
       >
         <Tabs
@@ -138,21 +144,35 @@ function EmployeeOverviewPage(props) {
           // style={{ padding: "0 20px" }}
         >
           <Tab wrapped label="Profile" {...a11yProps(0)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Bank Accounts" {...a11yProps(1)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Family Info" {...a11yProps(2)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Documents" {...a11yProps(3)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Competencies" {...a11yProps(4)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Insurance" {...a11yProps(5)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Air Ticket Allowance" {...a11yProps(6)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="TimeOff Setup" {...a11yProps(7)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Assets" {...a11yProps(8)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Projects" {...a11yProps(9)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Part Time Types" {...a11yProps(10)} />
-
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Disciplinary Actions" {...a11yProps(11)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Schedules" {...a11yProps(12)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Contracts" {...a11yProps(13)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Custom Fields" {...a11yProps(14)} />
+          <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Off-Boarding" {...a11yProps(15)} />
         </Tabs>
       </Box>
