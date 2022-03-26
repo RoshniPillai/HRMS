@@ -140,7 +140,7 @@ function EmployeeOverviewPage(props) {
           <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Family Info" {...a11yProps(2)} />
           <Divider orientation="vertical" flexItem />
-          <Tab wrapped label="Documents" {...a11yProps(3)} />
+          {/* <Tab wrapped label="Documents" {...a11yProps(3)} />
           <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Competencies" {...a11yProps(4)} />
           <Divider orientation="vertical" flexItem />
@@ -164,7 +164,7 @@ function EmployeeOverviewPage(props) {
           <Divider orientation="vertical" flexItem />
           <Tab wrapped label="Custom Fields" {...a11yProps(14)} />
           <Divider orientation="vertical" flexItem />
-          <Tab wrapped label="Off-Boarding" {...a11yProps(15)} />
+          <Tab wrapped label="Off-Boarding" {...a11yProps(15)} /> */}
         </Tabs>
       </Box>
       {/* <Box
@@ -195,9 +195,13 @@ function EmployeeOverviewPage(props) {
         <BankAccountPage />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <FamilyInfoPage />
+        {/* <FamilyInfoPage /> */}
+        <BankAccountPage />
       </TabPanel>
       <TabPanel value={value} index={3}>
+        <FamilyInfoPage />
+      </TabPanel>
+      {/* <TabPanel value={value} index={3}>
         content
       </TabPanel>
       <TabPanel value={value} index={4}>
@@ -235,7 +239,46 @@ function EmployeeOverviewPage(props) {
       </TabPanel>
       <TabPanel value={value} index={15}>
         content
+      </TabPanel> */}
+      {/* <TabPanel value={value} index={3}>
+        content
       </TabPanel>
+      <TabPanel value={value} index={4}>
+        content
+      </TabPanel>
+      <TabPanel value={value} index={5}>
+        content
+      </TabPanel>
+      <TabPanel value={value} index={6}>
+        content
+      </TabPanel>
+      <TabPanel value={value} index={7}>
+        content
+      </TabPanel>
+      <TabPanel value={value} index={8}>
+        content
+      </TabPanel>
+      <TabPanel value={value} index={9}>
+        content
+      </TabPanel>
+      <TabPanel value={value} index={10}>
+        content
+      </TabPanel>
+      <TabPanel value={value} index={11}>
+        content
+      </TabPanel>
+      <TabPanel value={value} index={12}>
+        content
+      </TabPanel>
+      <TabPanel value={value} index={13}>
+        content
+      </TabPanel>
+      <TabPanel value={value} index={14}>
+        content
+      </TabPanel>
+      <TabPanel value={value} index={15}>
+        content
+      </TabPanel> */}
 
       {/* <TabPanel value={value1} index={0}>
         content
